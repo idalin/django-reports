@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-24 18:22+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: adminx.py:30
+msgid "Slice base info and data configurations"
+msgstr "图表基础信息和数据配置"
+
+#: adminx.py:31 adminx.py:40 models.py:90
+msgid "Slice Type"
+msgstr "图表类型"
+
+#: adminx.py:32
+msgid "Slice display configurations"
+msgstr "图表展示配置"
+
+#: models.py:27 slice.py:98
+msgid "Table"
+msgstr "表格"
+
+#: models.py:28 slice.py:147
+msgid "Line"
+msgstr "折线图"
+
+#: models.py:29 slice.py:158
+msgid "Bar"
+msgstr "柱状图"
+
+#: models.py:30 slice.py:174
+msgid "Map"
+msgstr "地图"
+
+#: models.py:31 slice.py:166
+msgid "Pie"
+msgstr "饼图"
+
+#: models.py:32 slice.py:182
+msgid "Radar"
+msgstr "雷达图"
+
+#: models.py:33
+msgid "Custom Slice"
+msgstr "自定义图表"
+
+#: models.py:38
+msgid "DataSource Name"
+msgstr "数据源名称"
+
+#: models.py:39
+msgid "DataSource Type"
+msgstr "数据源类型"
+
+#: models.py:40
+msgid "Host IP"
+msgstr ""
+
+#: models.py:41
+msgid "DataBase Port"
+msgstr ""
+
+#: models.py:42
+msgid "DataBase Name"
+msgstr ""
+
+#: models.py:43
+msgid "DataBase Username"
+msgstr ""
+
+#: models.py:44
+msgid "DataBase Password"
+msgstr ""
+
+#: models.py:55 models.py:69
+msgid "Filter Name"
+msgstr ""
+
+#: models.py:56
+msgid "Default Value"
+msgstr ""
+
+#: models.py:61
+msgid "Date"
+msgstr ""
+
+#: models.py:62
+msgid "Text"
+msgstr ""
+
+#: models.py:63
+msgid "Select"
+msgstr ""
+
+#: models.py:64
+msgid "Month"
+msgstr ""
+
+#: models.py:65 models.py:66
+msgid "Select from a source"
+msgstr ""
+
+#: models.py:70
+msgid "Filter Type"
+msgstr "过滤器类型"
+
+#: models.py:71
+msgid "Description of This Filter"
+msgstr ""
+
+#: models.py:72
+msgid "Default Value of this filter"
+msgstr ""
+
+#: models.py:81
+msgid "Description"
+msgstr "描述"
+
+#: models.py:82
+msgid "SQL statements"
+msgstr "SQL语句"
+
+#: models.py:91
+msgid "Title Of Slice"
+msgstr "图表标题"
+
+#: models.py:92
+msgid "Slice Parameters"
+msgstr "图表参数"
+
+#: models.py:93
+msgid "Description of This Slice"
+msgstr "图表描述"
+
+#: slice.py:12
+msgid "column name"
+msgstr "列名"
+
+#: slice.py:13
+msgid "column index"
+msgstr "列索引"
+
+#: slice.py:37 slice.py:137 slice.py:148
+msgid "Index way of data column"
+msgstr "数据列索引方式"
+
+#: slice.py:38 slice.py:138 slice.py:149
+msgid "Data column"
+msgstr "数据列"
+
+#: slice.py:39 slice.py:139 slice.py:150
+#, fuzzy
+#| msgid "DataSource Name"
+msgid "Data Name"
+msgstr "数据源名称"
+
+#: slice.py:89
+msgid "Slice ID"
+msgstr "图表ID"
+
+#: slice.py:90
+msgid "Slice Title"
+msgstr "图表标题"
+
+#: slice.py:97
+msgid "Data Grids(Table)"
+msgstr ""
+
+#: slice.py:103
+msgid "Show Title?"
+msgstr "显示标题？"
+
+#: slice.py:106
+msgid "Show legend?"
+msgstr "显示图例？"
+
+#: slice.py:109
+msgid "Show tooltip?"
+msgstr "显示提示框？"
+
+#: slice.py:112
+msgid "Show toolbox?"
+msgstr "显示工具箱？"
+
+#: slice.py:117
+msgid "value"
+msgstr "数值轴"
+
+#: slice.py:118
+msgid "category"
+msgstr "类目轴"
+
+#: slice.py:119
+msgid "time"
+msgstr "时间轴"
+
+#: slice.py:120
+msgid "log"
+msgstr "对数轴"
+
+#: slice.py:123
+msgid "Show grid?"
+msgstr "显示网格？"
+
+#: slice.py:127
+msgid "X Axis Type"
+msgstr "X轴类型"
+
+#: slice.py:130
+msgid ""
+"\n"
+"        'value' 数值轴，适用于连续数据。\n"
+"        'category' 类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置"
+"类目数据。\n"
+"        'time' 时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式"
+"化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小"
+"时范围的刻度。\n"
+"        'log' 对数轴。适用于对数数据。\n"
+"        "
+msgstr ""
+
+#: slice.py:146
+msgid "Echarts Line chart"
+msgstr ""
+
+#: slice.py:157
+msgid "Echarts Bar chart"
+msgstr ""
+
+#: slice.py:165
+msgid "Echarts Pie chart"
+msgstr ""
+
+#: slice.py:173
+msgid "Echarts Map chart"
+msgstr ""
+
+#: slice.py:181
+msgid "Echarts Radar chart"
+msgstr ""
+
+#: slice.py:189
+msgid "Custom your own chart"
+msgstr "自定义图表"
+
+#: slice.py:190
+msgid "Custom Chart"
+msgstr "自定义图表"
+
+#: templates/reports/slices/base.html:36
+msgid "Widget Options"
+msgstr ""
+
+#: templates/reports/slices/base.html:45
+msgid "Remove"
+msgstr ""
+
+#: templates/reports/slices/base.html:46
+msgid "Close"
+msgstr ""
+
+#: templates/reports/slices/base.html:47
+msgid "Save changes"
+msgstr ""
+
+#: templates/reports/views/slice.html:25
+msgid "Edit"
+msgstr ""
+
+#: templates/reports/views/slice.html:28
+msgid "Delete"
+msgstr ""
+
+#: views.py:44
+msgid "This is a test."
+msgstr ""
+
+#: views.py:47
+msgid "test"
+msgstr ""
+
+#: views.py:99
+msgid "Query"
+msgstr ""
+
+#: views.py:219
+msgid "Filters"
+msgstr ""
+
+#~ msgid "X Axis data config"
+#~ msgstr "X轴数据配置"
