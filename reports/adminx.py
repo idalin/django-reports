@@ -57,6 +57,8 @@ class SliceAdmin(object):
 
     def convert_slice_params(self, wizard, cleaned_data, form):
         slice = Slice()
+        data = wizard.get_cleaned_data_for_step(wizard.steps.prev)
+        slice_type = data['slice_type']
         value = dict([(f.name, f.value()) for f in form])
         logger.debug('Value before: %s' % value)
         params = {}
@@ -85,8 +87,14 @@ class SliceAdmin(object):
             params['xaxis']['type'] = value['xAxis_type']
             del value['xAxis_type']
 
+        params['yAxis'] = {}
+        if 'yAxis_type' in value.keys():
+            params['yAxis']['type'] = value['yAxis_type']
+            del value['yAxis_type']
+
+        logger.debug('chart type: %s' % slice_type)
         for serie in params['series']:
-            serie['type'] = 'line'
+            serie['type'] = slice_type
         params.update(value)
         logger.debug('Value after: %s' % params)
         slice.set_params(params)
