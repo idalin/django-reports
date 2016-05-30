@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 18:22+0800\n"
+"POT-Creation-Date: 2016-05-30 17:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: adminx.py:30
+#: adminx.py:31
 msgid "Slice base info and data configurations"
 msgstr "图表基础信息和数据配置"
 
-#: adminx.py:31 adminx.py:40 models.py:90
+#: adminx.py:32 adminx.py:41 models.py:85
 msgid "Slice Type"
 msgstr "图表类型"
 
-#: adminx.py:32
+#: adminx.py:33
 msgid "Slice display configurations"
 msgstr "图表展示配置"
 
-#: models.py:27 slice.py:98
+#: models.py:27 slice.py:149
 msgid "Table"
 msgstr "表格"
 
-#: models.py:28 slice.py:147
+#: models.py:28 slice.py:203
 msgid "Line"
 msgstr "折线图"
 
-#: models.py:29 slice.py:158
+#: models.py:29 slice.py:212
 msgid "Bar"
 msgstr "柱状图"
 
-#: models.py:30 slice.py:174
+#: models.py:30 slice.py:228
 msgid "Map"
 msgstr "地图"
 
-#: models.py:31 slice.py:166
+#: models.py:31 slice.py:220
 msgid "Pie"
 msgstr "饼图"
 
-#: models.py:32 slice.py:182
+#: models.py:32 slice.py:236
 msgid "Radar"
 msgstr "雷达图"
 
@@ -67,159 +67,141 @@ msgstr "数据源类型"
 
 #: models.py:40
 msgid "Host IP"
-msgstr ""
+msgstr "主机IP"
 
 #: models.py:41
 msgid "DataBase Port"
-msgstr ""
+msgstr "数据库端口"
 
 #: models.py:42
 msgid "DataBase Name"
-msgstr ""
+msgstr "数据库名"
 
 #: models.py:43
 msgid "DataBase Username"
-msgstr ""
+msgstr "数据库用户名"
 
 #: models.py:44
 msgid "DataBase Password"
-msgstr ""
-
-#: models.py:55 models.py:69
-msgid "Filter Name"
-msgstr ""
+msgstr "数据库密码"
 
 #: models.py:56
-msgid "Default Value"
-msgstr ""
-
-#: models.py:61
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
-#: models.py:62
+#: models.py:57
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
-#: models.py:63
+#: models.py:58
 msgid "Select"
 msgstr ""
 
-#: models.py:64
+#: models.py:59
 msgid "Month"
-msgstr ""
+msgstr "月"
 
-#: models.py:65 models.py:66
+#: models.py:60 models.py:61
 msgid "Select from a source"
 msgstr ""
 
-#: models.py:70
+#: models.py:64
+msgid "Filter Name"
+msgstr "过滤器名称"
+
+#: models.py:65
 msgid "Filter Type"
 msgstr "过滤器类型"
 
-#: models.py:71
+#: models.py:66
 msgid "Description of This Filter"
-msgstr ""
+msgstr "过滤器描述"
 
-#: models.py:72
+#: models.py:67
 msgid "Default Value of this filter"
-msgstr ""
+msgstr "过滤器默认值"
 
-#: models.py:81
+#: models.py:76
 msgid "Description"
 msgstr "描述"
 
-#: models.py:82
+#: models.py:77
 msgid "SQL statements"
 msgstr "SQL语句"
 
-#: models.py:91
+#: models.py:86
 msgid "Title Of Slice"
 msgstr "图表标题"
 
-#: models.py:92
+#: models.py:87
 msgid "Slice Parameters"
 msgstr "图表参数"
 
-#: models.py:93
+#: models.py:88
 msgid "Description of This Slice"
 msgstr "图表描述"
 
-#: slice.py:12
+#: slice.py:16 widgets.py:66
 msgid "column name"
-msgstr "列名"
+msgstr "列名称"
 
-#: slice.py:13
+#: slice.py:17 widgets.py:67
 msgid "column index"
 msgstr "列索引"
 
-#: slice.py:37 slice.py:137 slice.py:148
-msgid "Index way of data column"
-msgstr "数据列索引方式"
-
-#: slice.py:38 slice.py:138 slice.py:149
-msgid "Data column"
-msgstr "数据列"
-
-#: slice.py:39 slice.py:139 slice.py:150
-#, fuzzy
-#| msgid "DataSource Name"
-msgid "Data Name"
-msgstr "数据源名称"
-
-#: slice.py:89
-msgid "Slice ID"
-msgstr "图表ID"
-
-#: slice.py:90
-msgid "Slice Title"
-msgstr "图表标题"
-
-#: slice.py:97
-msgid "Data Grids(Table)"
-msgstr ""
-
-#: slice.py:103
-msgid "Show Title?"
-msgstr "显示标题？"
-
-#: slice.py:106
-msgid "Show legend?"
-msgstr "显示图例？"
-
-#: slice.py:109
-msgid "Show tooltip?"
-msgstr "显示提示框？"
-
-#: slice.py:112
-msgid "Show toolbox?"
-msgstr "显示工具箱？"
-
-#: slice.py:117
+#: slice.py:22
 msgid "value"
 msgstr "数值轴"
 
-#: slice.py:118
+#: slice.py:23
 msgid "category"
 msgstr "类目轴"
 
-#: slice.py:119
+#: slice.py:24
 msgid "time"
 msgstr "时间轴"
 
-#: slice.py:120
+#: slice.py:25
 msgid "log"
 msgstr "对数轴"
 
-#: slice.py:123
+#: slice.py:140
+msgid "Slice ID"
+msgstr "图表ID"
+
+#: slice.py:141
+msgid "Slice Title"
+msgstr "图表标题"
+
+#: slice.py:148
+msgid "Data Grids(Table)"
+msgstr ""
+
+#: slice.py:154
+msgid "Show Title?"
+msgstr "显示标题？"
+
+#: slice.py:157
+msgid "Show legend?"
+msgstr "显示图例？"
+
+#: slice.py:160
+msgid "Show tooltip?"
+msgstr "显示提示框？"
+
+#: slice.py:163
+msgid "Show toolbox?"
+msgstr "显示工具箱？"
+
+#: slice.py:168
 msgid "Show grid?"
 msgstr "显示网格？"
 
-#: slice.py:127
+#: slice.py:172
 msgid "X Axis Type"
 msgstr "X轴类型"
 
-#: slice.py:130
+#: slice.py:175 slice.py:187
 msgid ""
 "\n"
 "        'value' 数值轴，适用于连续数据。\n"
@@ -232,31 +214,40 @@ msgid ""
 "        "
 msgstr ""
 
-#: slice.py:146
+#: slice.py:182
+msgid "xAxis"
+msgstr "x轴"
+
+#: slice.py:184
+#| msgid "X Axis Type"
+msgid "Y Axis Type"
+msgstr "Y轴类型"
+
+#: slice.py:202
 msgid "Echarts Line chart"
-msgstr ""
+msgstr "Echarts折线图"
 
-#: slice.py:157
+#: slice.py:211
 msgid "Echarts Bar chart"
-msgstr ""
+msgstr "Echart柱状图"
 
-#: slice.py:165
+#: slice.py:219
 msgid "Echarts Pie chart"
-msgstr ""
+msgstr "Echarts饼图"
 
-#: slice.py:173
+#: slice.py:227
 msgid "Echarts Map chart"
-msgstr ""
+msgstr "Echarts地图"
 
-#: slice.py:181
+#: slice.py:235
 msgid "Echarts Radar chart"
-msgstr ""
+msgstr "Echarts雷达图"
 
-#: slice.py:189
+#: slice.py:243
 msgid "Custom your own chart"
 msgstr "自定义图表"
 
-#: slice.py:190
+#: slice.py:244
 msgid "Custom Chart"
 msgstr "自定义图表"
 
@@ -266,39 +257,53 @@ msgstr ""
 
 #: templates/reports/slices/base.html:45
 msgid "Remove"
-msgstr ""
+msgstr "删除"
 
 #: templates/reports/slices/base.html:46
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: templates/reports/slices/base.html:47
 msgid "Save changes"
-msgstr ""
+msgstr "保存修改"
 
 #: templates/reports/views/slice.html:25
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: templates/reports/views/slice.html:28
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
-#: views.py:44
-msgid "This is a test."
-msgstr ""
+#: views.py:60
+msgid "Submit"
+msgstr "提交"
 
-#: views.py:47
-msgid "test"
-msgstr ""
-
-#: views.py:99
-msgid "Query"
-msgstr ""
-
-#: views.py:219
+#: views.py:203
 msgid "Filters"
-msgstr ""
+msgstr "过滤器"
+
+#: widgets.py:61
+msgid "Index way of data column"
+msgstr "数据列索引方式"
+
+#: widgets.py:62
+msgid "Data column"
+msgstr "数据列"
+
+#: widgets.py:63
+#, fuzzy
+#| msgid "DataSource Name"
+msgid "Data Name"
+msgstr "数据源名称"
+
+#: widgets.py:87
+msgid "Add a new serie"
+msgstr "添加一个新系列"
+
+#: widgets.py:90
+msgid "Remove this serie"
+msgstr "删除这个新系列"
 
 #~ msgid "X Axis data config"
 #~ msgstr "X轴数据配置"

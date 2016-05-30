@@ -44,13 +44,13 @@ class FilterForm(forms.Form):
         self.helper.form_method = 'GET'
         self.helper.form_action = ''
         for f in filters:
-            name = f['name']
+            name = f.name
             if name in args[0].keys():
                 default_value = args[0][name]
             else:
-                default_value = f['default_value']
-            f_type = f['type']
-            description = f['description']
+                default_value = f.get_default_value()
+            f_type = f.type
+            description = f.description
             logger.debug('initial: %s' % default_value)
             if f_type == 'Date':
                 self.fields[name] = forms.DateField(label=description, widget=widgets.AdminDateWidget, required=False, initial=default_value)
@@ -74,7 +74,7 @@ class SliceView(DetailAdminView):
     show_filters = True
 
     def get_filter(self):
-        return self.obj.sql.filters.all().values()
+        return self.obj.sql.filters.all()
 
     def get_filter_form(self):
         f = self.get_filter()
@@ -169,22 +169,23 @@ class SliceView(DetailAdminView):
     def get_sql(self):
         p = dict(self.request.GET.items()).copy()
         filters = self.get_filter()
-        filter_names = map(lambda n: n['name'], filters)
+        filter_names = map(lambda n: n['name'], filters.values())
         for k in p.keys():
             if k not in filter_names:
                 del p[k]
         sql = text(self.obj.sql.value)
         params = {}
         for f in filters:
-            if f['name'] in p.keys() and p[f['name']]:
-                params[f['name']] = p[f['name']]
+            if f.name in p.keys() and p[f.name]:
+                params[f.name] = p[f.name]
             else:
-                params[f['name']] = f['default_value']
+                params[f.name] = f.get_default_value()
         sql = sql.bindparams(**params)
         logger.debug(p)
         logger.debug('raw sql: %s' % sql)
         logger.debug(params)
         return sql
+
 
     def get_response(self, *args, **kwargs):
         context = self.get_context()

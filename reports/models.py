@@ -1,5 +1,6 @@
 from django.utils.translation import ugettext as _
 from django.db import models
+import datetime
 #from jsonfield2 import JSONField, JSONAwareManager
 import json
 from  xadmin.models import JSONEncoder
@@ -60,6 +61,13 @@ class Filter(models.Model):
         ('SRCSelect', _('Select from a source')),
         ('HLDSelect', _('Select from a source')),
     )
+
+    DEFAULT_DATE = (
+        ('today', _('Today')),
+        ('yesterday', _('Yesterday')),
+        ('one_week_ago', _('One week ago')),
+        ('one_month_ago', _('One month ago'))
+    )
     #slice = models.ForeignKey(Slice)
     name = models.CharField(_('Filter Name'), max_length=128)
     type = models.CharField(_('Filter Type'), max_length=64, choices=FILTERTYPE)
@@ -68,6 +76,25 @@ class Filter(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.description
+
+
+    def get_default_value(self):
+        dv = self.default_value
+        ftype = self.type
+        if ftype == 'Date':
+            if dv.lower() == 'today':
+                return str(datetime.date.today())
+            elif dv.lower() == 'yesterday':
+                return str(datetime.date.today()-datetime.timedelta(days=1))
+            elif dv.lower() == 'one_week_ago':
+                return str(datetime.date.today()-datetime.timedelta(days=7))
+            elif dv.lower() == 'one_month_ago':
+                return str(datetime.date.today()-datetime.timedelta(days=30))
+            else:
+                return str(datetime.date.today())
+        else:
+            return dv
+
 
 
 class SQL(models.Model):
