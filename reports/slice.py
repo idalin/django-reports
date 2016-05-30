@@ -149,7 +149,7 @@ class TableSlice(BaseSlice):
     slice_title = _('Table')
 
 
-class EcharsBaseSlice(BaseSlice):
+class EchartsBaseSlice(BaseSlice):
     #chart title options
     title_show = forms.BooleanField(label=_('Show Title?'), initial=False, required=False)
 
@@ -163,7 +163,7 @@ class EcharsBaseSlice(BaseSlice):
     toolbox_show = forms.BooleanField(label=_('Show toolbox?'), initial=True, required=False)
 
 
-class GridBaseSlice(EcharsBaseSlice):
+class GridBaseSlice(EchartsBaseSlice):
     #grid options
     grid_show = forms.BooleanField(label=_('Show grid?'), initial=False, required=False)
 
@@ -213,7 +213,7 @@ class BarSlice(GridBaseSlice):
 
 
 @slice_manager.register
-class PieSlice(BaseSlice):
+class PieSlice(EchartsBaseSlice):
     slice_type = 'pie'
     slice_icon = 'fa fa-pie-chart'
     description = _('Echarts Pie chart')
@@ -221,7 +221,7 @@ class PieSlice(BaseSlice):
 
 
 @slice_manager.register
-class MapSlice(BaseSlice):
+class MapSlice(EchartsBaseSlice):
     slice_type = 'map'
     slice_icon = 'fa fa-map'
     description = _('Echarts Map chart')
@@ -229,7 +229,7 @@ class MapSlice(BaseSlice):
 
 
 @slice_manager.register
-class RadarSlice(BaseSlice):
+class RadarSlice(EchartsBaseSlice):
     slice_type = 'radar'
     slice_icon = 'fa fa-star'
     description = _('Echarts Radar chart')
